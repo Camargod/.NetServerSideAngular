@@ -1,44 +1,23 @@
-<header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-  >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">ProductFrontServer</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li>
-        </ul>
-      </div>
+<div class="flex flex-column lateral-navigation align-center" [ngClass]="selectedSideNavigationStyle">
+  <div class="flex find-item">
+    <div class="flex align-center justify-center">
+      <input class="text-input" placeholder="O que você procura?">
     </div>
-  </nav>
-</header>
+    <div class="icon flex justify-center align-center">
+      <i class="material-icons search" (click)="sideNavToggle()">search</i>
+    </div>
+  </div>
+  <div *ngFor="let item of categories" class="flex icon-zone">
+    <div *ngIf="item.type=='image'" class="icon flex align-center justify-center">
+      <svg-icon class="svg-icon" key={{item.icon}} color="white" fontSize={{item.size}}></svg-icon>
+    </div>
+    <div class="text-zone flex align-center">
+      <p>{{item.name}}</p>
+    </div>
+  </div>
+  <div>
+    <p>entre ou registre-se</p>
+  </div>
+</div>
+
+<i class="material-icons md-48 lateral-icon" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i>
