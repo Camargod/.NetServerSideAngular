@@ -1,19 +1,35 @@
 .header
 {
     height: 100px;
-    position: absolute;
-    margin-left: -100px;
+    margin-right: -100px;
     justify-content: flex-end;
     z-index: 1;
-    .logo
-    {
-        position: absolute;
-        font-size: 56px;
-        left: 50%;
-    }
-
+    background-color: #FFFAFA;
     .shortcuts
     {
-        // background-color: $tema2;
+        width:180px;
+        border-bottom-left-radius: 50px;
+        background-color: #118AB2;
+        .icons
+        {
+            font-size: 56px;
+        }
+        .fav-ico
+        {
+            color: #F2557A;
+        }
+        .cart-ico
+        {
+            color: #06D6A0;
+        }
     }
+}
+
+.logo
+{
+    position: absolute;
+    z-index: 1;
+    font-size: 56px;
+    left: 50%;
+    top: 20px;
 }

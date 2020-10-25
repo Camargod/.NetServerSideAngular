@@ -27,7 +27,6 @@ export class NavMenuComponent {
     this.isExpanded = !this.isExpanded;
   }
   sideNavToggle(){
-    debugger;
     if(this.selectedSideNavigationStyle == "")
     {
       this.selectedSideNavigationStyle = "lateral-navigation-open"

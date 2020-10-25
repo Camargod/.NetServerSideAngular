@@ -22,7 +22,7 @@ html {
   background-color:#118AB2;
   width: 100px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0px;
   transition: 2s;
@@ -70,7 +70,7 @@ html {
 
 .lateral-icon
 {
-  position: absolute;
+  position: fixed;
   left: 100px;
   top: 0px;
   font-size: 80px;
