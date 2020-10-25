@@ -101,3 +101,17 @@ html {
     cursor: pointer;
   }
 }
+
+.register
+{
+  font-size: 38px !important;
+  a
+  {
+    color: white;
+    text-decoration: underline;
+    &:hover
+    {
+      font-weight: 500;
+    }
+  }
+}

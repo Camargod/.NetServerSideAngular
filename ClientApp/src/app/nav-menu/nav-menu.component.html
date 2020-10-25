@@ -15,8 +15,15 @@
       <p>{{item.name}}</p>
     </div>
   </div>
-  <div>
-    <p>entre ou registre-se</p>
+  <div class="flex h-100 w-100 align-end">
+    <div class="icon-zone flex">
+      <div class="icon flex align-center justify-center">
+        <i class="material-icons search" (click)="sideNavToggle()">account_circle</i>
+      </div>
+      <div class="text-zone flex align-center">
+        <p class="register"><a [routerLink]="'/login'">Entre</a> ou <a [routerLink]="'/login'">Cadastre-se</a></p>
+      </div>
+    </div>
   </div>
 </div>
 

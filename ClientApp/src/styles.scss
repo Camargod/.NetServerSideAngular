@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+@import './assets/styles/variables';
 /* Provide sufficient contrast against white background */
+
 a {
   color: #0366d6;
 }
@@ -13,6 +15,11 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+main
+{
+  padding-left: 100px;
 }
 
 .flex
@@ -46,8 +53,22 @@ code {
   text-align: center;
 }
 
-.tema-market-place-1-hex { color: #073B4C; }
-.tema-market-place-2-hex { color: #118AB2; }
-.tema-market-place-3-hex { color: #06D6A0; }
-.tema-market-place-4-hex { color: #FFD166; }
-.tema-market-place-5-hex { color: #F2557A; }
+.h-100
+{
+  height: 100%;
+}
+
+.align-end
+{
+  align-items: flex-end;
+}
+
+.justify-self-center
+{
+  justify-self: center;
+}
+
+.main-w-100
+{
+  width: calc(100% - 100px);
+}
