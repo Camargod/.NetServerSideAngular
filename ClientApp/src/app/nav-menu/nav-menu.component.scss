@@ -23,6 +23,7 @@ html {
   width: 100px;
   height: 100vh;
   position: absolute;
+  z-index: 2;
   top: 0px;
   transition: 2s;
   .icon
@@ -75,6 +76,7 @@ html {
   font-size: 80px;
   transition: 2s;
   color:#0074AD;
+  z-index: 2;
   &:hover
   {
     text-shadow: 0 5px 5px black;

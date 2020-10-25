@@ -1,9 +1,9 @@
 <div class="flex flex-column lateral-navigation align-center" [ngClass]="selectedSideNavigationStyle">
-  <div class="flex find-item">
+  <div class="flex find-item icon-zone">
     <div class="flex align-center justify-center">
       <input class="text-input" placeholder="O que você procura?">
     </div>
-    <div class="icon flex justify-center align-center">
+    <div class="icon flex justify-center align-center pointer">
       <i class="material-icons search" (click)="sideNavToggle()">search</i>
     </div>
   </div>
@@ -27,4 +27,4 @@
   </div>
 </div>
 
-<i class="material-icons md-48 lateral-icon" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i>
+<i class="material-icons md-48 lateral-icon pointer" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i>
