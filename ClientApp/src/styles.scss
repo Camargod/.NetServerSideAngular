@@ -38,6 +38,7 @@ main
   padding-left: 100px;
   height: calc(100% - 100px);
   background-color: #FFFAFA;
+  padding-top: 2px;
 }
 
 .flex
@@ -98,4 +99,9 @@ main
 .pointer
 {
   cursor: pointer;
+}
+
+.primary-color
+{
+  color: #118AB2;
 }

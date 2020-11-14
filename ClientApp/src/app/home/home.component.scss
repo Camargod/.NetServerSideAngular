@@ -1,4 +1,32 @@
-.image-display
+.main-content
 {
-    
+    padding: 0px 40px;
+    .image-display
+    {
+        display: flex;
+        justify-content: center;
+        max-height: 430px;
+        position: relative;
+        img
+        {
+            border-radius: 25px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .navegation-icon
+        {
+            position: absolute;
+            top: 50%;
+            font-size: 48px;
+            color: #118AB2;
+        }
+        .left
+        {
+            left: 0%;
+        }
+        .right
+        {
+            right: 0%;
+        }
+    }
 }
