@@ -1,0 +1,17 @@
+.card-body{
+    width: 280px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    background-color: white;
+    border-radius: 25px;
+    align-items: center;
+    .product-name{
+        color: #118AB2;
+        font-size: 18px;
+    }
+    .product-price{
+        font-size: 28px;
+    }
+}

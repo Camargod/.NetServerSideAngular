@@ -1,0 +1,14 @@
+<div class="w-100 prateleira-body">
+  <div class="section-title flex justify-center w-100 primary-color">
+    {{sectionTitle}}
+  </div>
+  <div class="products">
+    <i class="material-icons md-48 navegation-icon pointer left" (click)="nextItem(false)">keyboard_arrow_left</i>
+    <div class="w-100 flex prateleira-list" #prateleiraList>
+      <ng-container *ngFor="let product of mockProductList">
+        <product-card [product]="product"></product-card>
+      </ng-container>
+    </div>
+    <i class="material-icons md-48 navegation-icon pointer right" (click)="nextItem(true)">keyboard_arrow_right</i>
+  </div>
+</div>

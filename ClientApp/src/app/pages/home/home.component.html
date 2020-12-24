@@ -4,6 +4,7 @@
         <img [src]="'/assets/banner1.jpg'">
         <i class="material-icons md-48 navegation-icon pointer right">keyboard_arrow_right</i>
     </div>
-    
-    <prateleira-section></prateleira-section>
+    <ng-container *ngFor="let prateleira of prateleiras">
+        <prateleira-section [sectionTitle]="prateleira.name"></prateleira-section>
+    </ng-container>
 </div>

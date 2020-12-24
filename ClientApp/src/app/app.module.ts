@@ -5,24 +5,24 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { HomeComponent } from './pages/home/home.component';
 import icons from '../assets/svg/svg-icons';
 import { SvgIconsModule } from '@ngneat/svg-icon';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
-import { PrateleiraSectionComponent } from './prateleira-section/prateleira-section.component';
+import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
+import { PrateleiraSectionComponent } from './components/prateleira-section/prateleira-section.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [	
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     HeaderMenuComponent,
-    PrateleiraSectionComponent
+    PrateleiraSectionComponent,
+    LoginComponent,
+    ProductCardComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,6 +30,7 @@ import { PrateleiraSectionComponent } from './prateleira-section/prateleira-sect
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      {path:'login',component: LoginComponent}
     ]),
     SvgIconsModule.forRoot({
       icons

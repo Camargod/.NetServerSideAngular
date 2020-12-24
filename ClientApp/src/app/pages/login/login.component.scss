@@ -1,0 +1,84 @@
+.body{
+    padding-bottom: 50px;
+    .section{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .form-body{
+            background-color: white;
+            width: 80%;
+            border-radius: 30px;
+            padding: 60px 50px;
+            box-shadow: 0px 2px 10px #00000029;
+            display: flex;
+            flex-direction: column;    
+            justify-content: space-between;
+            height: 100%;
+            input{
+                width: 100%;
+                font-size: 100%;
+                padding: 14px 20px;
+                border-radius: 15px;
+                border: 1px solid #CCCCCC;
+            }
+            .checkbox{
+                width: fit-content;
+                margin-right: 10px;
+            }
+            .button{
+                font-size: 34px;
+                padding: 18px 20px;
+                color: white;
+                border: none;
+            }
+            .or{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    position: relative;
+                    z-index: 2;
+                    margin-bottom: 0;
+                    background-color: white;
+                    padding: 0px 10px;
+                    font-size: 22px;
+                }
+                .line{
+                    position: absolute;
+                    border-bottom: 2px solid #656565;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.forgot{
+    font-size: 22px;
+    margin-bottom: 30px;
+    .forgot-text{
+        color: #118AB2;
+        text-decoration: underline;
+    }
+}
+
+.google-button{
+    border: 2px solid #CCCCCC;
+    border-radius: 50px;
+    font-size: 26px;
+    background-color: white;
+    padding: 10px 0px;
+}
+
+.facebook-button{
+    border: none;
+    border-radius: 50px;
+    font-size: 26px;
+    background-color: #2D88FF;
+    padding: 10px 0px;
+    color: white;
+}
+input,p,a,button{
+    color: #656565;
+}

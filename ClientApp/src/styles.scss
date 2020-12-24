@@ -39,6 +39,7 @@ main
   height: calc(100% - 100px);
   background-color: #FFFAFA;
   padding-top: 2px;
+  overflow-x: hidden;
 }
 
 .flex
@@ -104,4 +105,17 @@ main
 .primary-color
 {
   color: #118AB2;
+}
+
+app-login{
+  width: 100%;
+}
+
+.button{
+  background-color:#118AB2;
+  border-radius: 50px;
+}
+
+.material-icons{
+  user-select: none;
 }

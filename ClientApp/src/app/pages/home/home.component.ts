@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Prateleiras } from 'src/app/objects/home-prateleiras';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  prateleiras = Prateleiras;
 }

@@ -1,0 +1,46 @@
+.section-title
+{
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.left
+{
+    left: 0%;
+}
+.right
+{
+    right: 0%;
+}
+
+.navegation-icon
+{
+    position: absolute;
+    top: 50%;
+    font-size: 48px;
+    color: #118AB2;
+}
+
+.products{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0px 40px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.prateleira-list{
+    overflow: hidden;
+}
+
+.prateleira-body{
+    display: grid;
+}
+
+product-card{
+    margin-left: 50px;
+}
+product-card :last-child{
+    margin-left: 0px;
+}
