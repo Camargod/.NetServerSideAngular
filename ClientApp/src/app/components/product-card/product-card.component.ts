@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import ProductCard from 'src/app/entities/product-card';
+import { SubCategoryCard } from 'src/app/entities/subCategory-card';
 
 @Component({
   selector: 'product-card',

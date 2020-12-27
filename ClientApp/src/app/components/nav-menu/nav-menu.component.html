@@ -7,7 +7,7 @@
       <i class="material-icons search" (click)="sideNavToggle()">search</i>
     </div>
   </div>
-  <div *ngFor="let item of categories" class="flex icon-zone">
+  <div *ngFor="let item of categories" class="flex icon-zone" (click)="navigateCategory(item)">
     <div *ngIf="item.type=='image'" class="icon flex align-center justify-center">
       <svg-icon class="svg-icon" key={{item.icon}} color="white" fontSize={{item.size}}></svg-icon>
     </div>

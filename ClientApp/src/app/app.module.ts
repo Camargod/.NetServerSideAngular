@@ -13,6 +13,7 @@ import { HeaderMenuComponent } from './components/header-menu/header-menu.compon
 import { PrateleiraSectionComponent } from './components/prateleira-section/prateleira-section.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { CategoryPageComponent } from './pages/category-page/category-page.component';
 
 @NgModule({
   declarations: [	
@@ -22,7 +23,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HeaderMenuComponent,
     PrateleiraSectionComponent,
     LoginComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CategoryPageComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,7 +32,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      {path:'login',component: LoginComponent}
+      { path:'login',component: LoginComponent},
+      { path:'category/:categoryName', component:CategoryPageComponent}
     ]),
     SvgIconsModule.forRoot({
       icons
