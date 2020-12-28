@@ -1,5 +1,6 @@
-<div class="flex w-100">
-  <ng-container *ngFor="let category of subCategories">
+<div #body class="flex w-100 category-body">
+  <div class="flex w-100 justify-center category-title">Categoria</div>
+  <div [style.width.%]="columnWidth" class="category-column" *ngFor="let category of subCategories">
     <product-card [product]="category"></product-card>
-  </ng-container>
+  </div>
 </div>

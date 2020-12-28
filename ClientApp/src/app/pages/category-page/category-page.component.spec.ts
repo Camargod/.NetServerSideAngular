@@ -24,5 +24,6 @@ describe('CategoryPageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component.columnWidth).toEqual(25);
   });
 });

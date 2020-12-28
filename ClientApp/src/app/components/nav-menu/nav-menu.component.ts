@@ -20,16 +20,8 @@ export class NavMenuComponent {
   ]
 
   constructor(private router : Router){
-
   }
 
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
 
   sideNavToggle(){
     if(this.selectedSideNavigationStyle == "")
@@ -42,9 +34,13 @@ export class NavMenuComponent {
       this.selectedSideNavigationStyle = ""
       this.arrowStyle = ""
     }
+    this.isExpanded = !this.isExpanded;
   }
 
   navigateCategory(category){
+    if(this.isExpanded){
+      this.sideNavToggle();
+    }
     this.router.navigate(["category",category.id])
   }
 }

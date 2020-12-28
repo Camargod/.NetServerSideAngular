@@ -31,7 +31,7 @@ export class HeaderMenuComponent implements OnInit, AfterViewInit
       this.renderer.setStyle(this.header.nativeElement,"background-color","transparent")
       // document.body.scrollTo({top:document.body.scrollTop + 20,behavior:"auto"})
       this.renderer.setStyle(this.main,"height","100%");
-    } else {
+    } else if(this.main.scrollTop == 0) {
       this.renderer.setStyle(this.header.nativeElement,"position","relative")
       this.renderer.setStyle(this.logo.nativeElement,"position","absolute")
       this.renderer.setStyle(this.header.nativeElement,"background-color","#FFFAFA")

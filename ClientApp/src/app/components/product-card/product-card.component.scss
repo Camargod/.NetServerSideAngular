@@ -7,11 +7,17 @@
     background-color: white;
     border-radius: 25px;
     align-items: center;
+    justify-content: space-between;
     .product-name{
         color: #118AB2;
         font-size: 18px;
     }
     .product-price{
         font-size: 28px;
+    }
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 4px 4px 0px 0px #EBEBEB;
     }
 }
