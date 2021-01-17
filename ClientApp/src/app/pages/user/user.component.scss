@@ -1,0 +1,15 @@
+.tab-header-item{
+    font-size: 72px;
+    color: #073B4C;
+}
+
+::ng-deep .mat-tab-labels{
+    justify-content: center;
+}
+::ng-deep .mat-tab-label{
+    font-size: 48px;
+    height: 68px !important;
+}
+::ng-deep .mat-tab-header{
+    height: 70px;
+}

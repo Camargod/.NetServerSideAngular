@@ -1,0 +1,30 @@
+.item-price{
+    font-size: 42px;
+}
+.item-title{
+    font-size: 32px;
+}
+.item-price-label{
+    margin-bottom: -16px;
+    font-size: 20px;
+}
+.img-container{
+    width: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+:host{
+    margin-top: 40px;
+}
+
+*{
+    color: #073B4C;
+}
+
+.right-items{
+    align-items: flex-end;
+}
+.self-right{
+    align-self: flex-end;
+}

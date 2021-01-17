@@ -25,7 +25,7 @@ export class CategoryPageComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  calculateColumns = () =>{
+  calculateColumns = () => {
     this.columnWidth = 100 / Math.floor(this.body.nativeElement.clientWidth / 300)
   }
 }

@@ -8,6 +8,8 @@
     border-radius: 25px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 4px;
+    margin-top: 2px;
     .product-name{
         color: #118AB2;
         font-size: 18px;
@@ -18,6 +20,6 @@
     cursor: pointer;
 
     &:hover{
-        box-shadow: 4px 4px 0px 0px #EBEBEB;
+        box-shadow: 3px 1px 7px 1px #EBEBEB;    
     }
 }

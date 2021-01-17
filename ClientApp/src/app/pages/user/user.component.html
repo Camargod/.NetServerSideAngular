@@ -1,0 +1,12 @@
+<div class="content-bodyflex flex-columnlumn">
+  <div class="w-100 flex justify-center">
+    <mat-tab-group class="w-100">
+      <ng-container *ngFor="let tab of tabs">
+          <mat-tab label={{tab.label}}> 
+              <ng-container *ngComponentOutlet="tab.component"></ng-container>
+          </mat-tab>
+    </ng-container>
+    </mat-tab-group>
+  </div>
+</div>
+

@@ -1,0 +1,38 @@
+:host{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 60px;
+}
+
+.order{
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    min-height: 450px;
+    display: flex;
+    padding: 30px 40px;
+    flex-direction: column;
+    .order-header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        color: #118AB2;
+        font-size: 36px;
+    }
+}
+
+input{
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    width: 33%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.search{
+    font-size: 48px;
+    color: #CCCCCC;
+    margin-left: 20px;
+}
