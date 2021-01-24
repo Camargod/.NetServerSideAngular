@@ -1,0 +1,41 @@
+:host{
+    width: 100%;
+    height: 100%;
+    padding: 40px 100px 0px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.address-card{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    padding: 37px 52px;
+    color: #073B4C;
+    font-size: 38px;
+    .title-address{
+        color: #118AB2;
+        font-size: 42px; 
+    }
+}
+
+button{
+    width: 275px;
+    padding: 10px 10px;
+}
+
+.plus-address{
+    color: #073B4C;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    .material-icons{
+        font-size: 48px !important;
+    }
+    &:hover{
+        color: #118AB2;
+        cursor: pointer;
+    }
+}

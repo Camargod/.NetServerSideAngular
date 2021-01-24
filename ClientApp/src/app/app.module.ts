@@ -20,6 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { OrderTabComponent } from './pages/user/tabs/order-tab/order-tab.component';
 import { OrderTabItemComponent } from './pages/user/tabs/order-tab/order-tab-item/order-tab-item.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { AddressTabComponent } from './pages/user/tabs/address-tab/address-tab.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     UserComponent,
     OrderTabComponent,
     OrderTabItemComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    AddressTabComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

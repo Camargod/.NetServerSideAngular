@@ -5,6 +5,7 @@
     align-items: center;
     padding: 100px 20px;
     flex-direction: column;
+    margin-left: -35px;
 }
 
 .register{
@@ -43,13 +44,16 @@
         align-items: center;
         margin-right: 10px;
         font-size: 28px;
+        color: #656565;
     }
     .nascimento-input{
-        width: 180px;
+        width: 250px;
         color: #656565;
         background-color: #FFFFFF;
         border-radius: 15px;
         border: 1px solid #CCCCCC;
+        text-align: center;
+        font-size: 28px;
         text-align: center;
     }
 }
@@ -60,8 +64,8 @@
 }
 
 .submit-button{
-    margin-top: 20px;
-    width: calc(100% - 100px);
+    margin-top: 30px;
+    width: calc(100% - 200px);
     border-radius: 50px;
     background-color: #118AB2;
     color: white;

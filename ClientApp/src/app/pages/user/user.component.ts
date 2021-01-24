@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   tabs = [
     {name:"order",label:"Pedidos",component:OrderTabComponent},
     {name:"register",label:"Cadastro",component:RegisterTabComponent},
-    {name:"address",label:"Pedidos",component:AddressTabComponent},
+    {name:"address",label:"Endereço",component:AddressTabComponent},
     {name:"rating", label:"Avaliações",component:RatingTabComponent}
   ]
 

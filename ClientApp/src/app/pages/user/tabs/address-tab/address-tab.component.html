@@ -1,3 +1,18 @@
-<p>
-  address-tab works!
-</p>
+<div *ngFor="let address of adresses; let i = index" class="address-card flex justify-between">
+  <div class="flex flex-column">
+   <span class="title-address">Endereço {{i + 1 | number}}</span> 
+   <span>{{address.street}}</span>
+   <span>{{address.district}} - {{address.UF}}</span>
+   <span>CEP: {{address.CEP}}</span>
+  </div>
+  <div class="flex align-center">
+    <button>Excluir</button>
+  </div>
+</div>
+
+<span class="plus-address">
+  <span class="material-icons">
+  add_circle_outline
+  </span>
+  Endereço
+</span>

@@ -9,7 +9,12 @@
 ::ng-deep .mat-tab-label{
     font-size: 48px;
     height: 68px !important;
+    opacity: 1 !important;
+    color: #073B4C;
 }
 ::ng-deep .mat-tab-header{
     height: 70px;
+}
+::ng-deep .mat-tab-label-active{
+    color: #118AB2;
 }

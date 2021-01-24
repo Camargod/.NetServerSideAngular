@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddressMock } from 'src/app/objects/address-mock';
 
 @Component({
   selector: 'app-address-tab',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class AddressTabComponent implements OnInit {
 
   constructor() { }
+
+  adresses = AddressMock
 
   ngOnInit() {
   }

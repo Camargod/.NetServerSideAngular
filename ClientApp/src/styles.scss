@@ -111,9 +111,11 @@ app-login, category-page, app-user{
   width: 100%;
 }
 
-.button{
+button{
   background-color:#118AB2;
   border-radius: 50px;
+  border: none;
+  color: #FFFFFF;
 }
 
 .material-icons{
