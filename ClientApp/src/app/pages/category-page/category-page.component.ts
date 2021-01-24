@@ -1,4 +1,5 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SubCategoriesMock } from 'src/app/objects/categories-mock';
 
 @Component({
@@ -9,13 +10,19 @@ import { SubCategoriesMock } from 'src/app/objects/categories-mock';
 
 export class CategoryPageComponent implements OnInit {
   @ViewChild("body",{static:false}) body : ElementRef<HTMLDivElement>;
-  constructor() { }
+  @Input() title = "";
+  constructor(private route: ActivatedRoute) { }
 
   subCategories = SubCategoriesMock
 
   columnWidth = 25;
 
   ngOnInit() {
+    if(this.title == ""){
+      this.route.params.subscribe((params)=>{
+        this.title = params.categoryName
+      })
+    }
   }
 
   ngAfterViewInit(): void {

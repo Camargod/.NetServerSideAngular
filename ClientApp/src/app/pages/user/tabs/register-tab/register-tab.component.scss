@@ -1,0 +1,71 @@
+:host{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 172px);
+    align-items: center;
+    padding: 100px 20px;
+    flex-direction: column;
+}
+
+.register{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    button{
+        border-radius: 50px;
+        background-color: #118AB2;
+        color: white;
+        font-size: 36px;
+        border: none;
+        padding: 4px 10px;
+    }
+    margin-bottom: 50px;
+}
+
+.form{
+    align-items: baseline;
+    position: relative;
+    justify-content: space-between;
+    .input{
+        width: 300px;
+        color: #656565;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        border: 1px solid #CCCCCC;
+        font-size: 28px;
+        width: 550px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    label{
+        margin-bottom: 0px !important;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        font-size: 28px;
+    }
+    .nascimento-input{
+        width: 180px;
+        color: #656565;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        border: 1px solid #CCCCCC;
+        text-align: center;
+    }
+}
+
+.checkpromo{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.submit-button{
+    margin-top: 20px;
+    width: calc(100% - 100px);
+    border-radius: 50px;
+    background-color: #118AB2;
+    color: white;
+    font-size: 36px;
+    border: none;
+    align-self: center;
+}

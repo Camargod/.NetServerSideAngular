@@ -44,3 +44,10 @@ product-card{
 product-card :last-child{
     margin-left: 0px;
 }
+
+.prateleira-full{
+    flex-wrap: wrap;
+}
+product-card{
+    margin-bottom: 20px;
+}

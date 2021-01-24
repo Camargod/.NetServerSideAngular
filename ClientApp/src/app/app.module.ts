@@ -19,6 +19,7 @@ import { UserComponent } from './pages/user/user.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { OrderTabComponent } from './pages/user/tabs/order-tab/order-tab.component';
 import { OrderTabItemComponent } from './pages/user/tabs/order-tab/order-tab-item/order-tab-item.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { OrderTabItemComponent } from './pages/user/tabs/order-tab/order-tab-ite
     CategoryPageComponent,
     UserComponent,
     OrderTabComponent,
-    OrderTabItemComponent
+    OrderTabItemComponent,
+    FavoritesComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -43,7 +45,8 @@ import { OrderTabItemComponent } from './pages/user/tabs/order-tab/order-tab-ite
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path:'login',component: LoginComponent},
       { path:'category/:categoryName', component: CategoryPageComponent},
-      { path:'my_profile', component: UserComponent}
+      { path:'my_profile', component: UserComponent},
+      { path:'favorites', component: FavoritesComponent}
     ]),
     SvgIconsModule.forRoot({
       icons
