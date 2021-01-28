@@ -21,6 +21,8 @@ import { OrderTabComponent } from './pages/user/tabs/order-tab/order-tab.compone
 import { OrderTabItemComponent } from './pages/user/tabs/order-tab/order-tab-item/order-tab-item.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { AddressTabComponent } from './pages/user/tabs/address-tab/address-tab.component';
+import { RatingTabComponent } from './pages/user/tabs/rating-tab/rating-tab.component';
+import { RatingStarsComponent } from './components/rating-stars/rating-stars.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { AddressTabComponent } from './pages/user/tabs/address-tab/address-tab.c
     OrderTabComponent,
     OrderTabItemComponent,
     FavoritesComponent,
-    AddressTabComponent
+    AddressTabComponent,
+    RatingTabComponent,
+    RatingStarsComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -1,0 +1,10 @@
+<div class="flex">
+  <ng-container *ngFor="let star of [].constructor(5);let i = index">
+    <span class="material-icons" *ngIf="i >= evaluation">
+      star_outline
+    </span>
+    <span class="material-icons" *ngIf="i < evaluation">
+      star
+    </span>
+  </ng-container>
+</div>

@@ -1,5 +1,6 @@
 <div class="card-body">
   <img [src]="product.image" height="210">
+  <rating-stars [evaluation]="4"></rating-stars>
   <span class="product-name">{{product.name}}</span>
   <span class="product-price" >{{product?.price | currency:'BRL'}}</span>
 </div>
