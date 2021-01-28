@@ -1,6 +1,6 @@
 <div #body class="flex w-100 category-body">
   <div class="flex w-100 justify-center category-title">{{title}}</div>
   <div [style.width.%]="columnWidth" class="category-column" *ngFor="let category of subCategories">
-    <product-card [product]="category"></product-card>
+  <product-card [product]="category" [hasFav]="false"></product-card>
   </div>
 </div>

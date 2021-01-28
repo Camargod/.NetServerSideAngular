@@ -25,4 +25,8 @@ export class PrateleiraSectionComponent implements OnInit {
     this.prateleiraListDiv.nativeElement.scrollTo({left:scrollTo,behavior:"smooth"})
   }
 
+  moveByWheel(event : WheelEvent){
+    event.preventDefault();
+    this.prateleiraListDiv.nativeElement.scrollLeft += event.deltaY
+  }
 }

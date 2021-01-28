@@ -1,6 +1,7 @@
 <div class="card-body">
+  <i class="material-icons fav" *ngIf="hasFav">favorite_border</i>
   <img [src]="product.image" height="210">
-  <rating-stars [evaluation]="4"></rating-stars>
+  <rating-stars [evaluation]="product.evaluation"></rating-stars>
   <span class="product-name">{{product.name}}</span>
   <span class="product-price" >{{product?.price | currency:'BRL'}}</span>
 </div>

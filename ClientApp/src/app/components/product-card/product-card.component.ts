@@ -10,6 +10,7 @@ import { SubCategoryCard } from 'src/app/entities/subCategory-card';
 export class ProductCardComponent implements OnInit {
 
   @Input() product : ProductCard;
+  @Input() hasFav = true;
   constructor() { }
 
   ngOnInit() {

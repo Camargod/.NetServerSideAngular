@@ -10,6 +10,7 @@
     justify-content: space-between;
     margin-bottom: 4px;
     margin-top: 2px;
+    position: relative;
     .product-name{
         color: #118AB2;
         font-size: 18px;
@@ -21,5 +22,11 @@
 
     &:hover{
         box-shadow: 3px 1px 7px 1px #EBEBEB;    
+    }
+    .fav{
+        position: absolute;
+        color: #118AB2;
+        left: 15px;
+        font-size: 36px;
     }
 }

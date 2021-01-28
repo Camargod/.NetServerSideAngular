@@ -2,7 +2,7 @@
   <div class="section-title flex justify-center w-100 primary-color">
     {{sectionTitle}}
   </div>
-  <div class="products">
+  <div class="products" (mousewheel)="moveByWheel($event)">
     <i class="material-icons md-48 navegation-icon pointer left" (click)="nextItem(false)">keyboard_arrow_left</i>
     <div class="w-100 flex prateleira-list" #prateleiraList>
       <ng-container *ngFor="let product of mockProductList">
