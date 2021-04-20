@@ -31,9 +31,12 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -105,7 +108,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist-server",
-            "main": "src/main.ts",
+            "main": "./src/server.ts",
             "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
@@ -123,6 +126,32 @@
               "namedChunks": false,
               "extractLicenses": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "ProductFrontServer:build",
+            "serverTarget": "ProductFrontServer:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ProductFrontServer:build:production",
+              "serverTarget": "ProductFrontServer:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "ProductFrontServer:build:production",
+            "serverTarget": "ProductFrontServer:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

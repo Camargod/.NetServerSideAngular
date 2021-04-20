@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
@@ -23,6 +22,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { AddressTabComponent } from './pages/user/tabs/address-tab/address-tab.component';
 import { RatingTabComponent } from './pages/user/tabs/rating-tab/rating-tab.component';
 import { RatingStarsComponent } from './components/rating-stars/rating-stars.component';
+import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
+import { AppRoutingModule } from './app.routing';
 
 
 @NgModule({
@@ -44,23 +45,31 @@ import { RatingStarsComponent } from './components/rating-stars/rating-stars.com
     RatingStarsComponent
    ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule.withServerTransition({ appId: 'Client-App' }),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path:'login',component: LoginComponent},
-      { path:'category/:categoryName', component: CategoryPageComponent},
-      { path:'my_profile', component: UserComponent},
-      { path:'favorites', component: FavoritesComponent}
-    ]),
     SvgIconsModule.forRoot({
       icons
     }),
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    AuthModule.forRoot({
+      domain:'marketplace-sa.us.auth0.com',
+      clientId:'KQIw0ZfvnLW1GYD47Kn0eLk6MtsshXzA',
+    }),
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHttpInterceptor,
+      multi: true,
+    },
+    {
+      provide: Window,
+      useValue: window,
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

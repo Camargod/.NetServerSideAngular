@@ -3,6 +3,12 @@
 @import './assets/styles/variables';
 /* Provide sufficient contrast against white background */
 
+:root{
+  --background-color: #18A9E0;
+  --hover-back-color: #092E3A;
+}
+
+
 *
 {
     margin: 0;
@@ -35,7 +41,7 @@ html
 
 main
 {
-  padding-left: 100px;
+  padding-left: 220px;
   background-color: #FFFAFA;
   padding-top: 2px;
   overflow-x: hidden;
@@ -130,6 +136,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 100%;
   display: flex;
 }
+
 .justify-between{
   justify-content: space-between;
+}
+
+router-outlet + *{
+  max-width: 1364px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  column-gap: 16px;
+  justify-content: center;
+  
+  @media only screen 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)  {
+    grid-template-columns: repeat(4,1fr);
+    max-width: calc(100% - 32px);
+  }
+}
+
+
+.s-14{
+  font-size: 14px;
+}
+.s-16{
+  font-size: 16px;
+}
+.s-24{
+  font-size: 24px;
+}
+.s-32{
+  font-size: 32px;
 }

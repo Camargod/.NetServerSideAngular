@@ -1,0 +1,12 @@
+.main-body{
+    width: 100%;
+    // display: grid;
+    // grid-template-columns: repeat(12,auto);
+    // column-gap: 16px;
+    // justify-content: center;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

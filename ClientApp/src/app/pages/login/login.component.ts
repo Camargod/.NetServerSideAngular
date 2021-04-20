@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(public auth: AuthService) { }
 
   ngOnInit() {
   }
 
-  submitLoginMock(){
-    this.router.navigate(['my_profile']);
+  async submitLoginMock(){
+    await this.auth.loginWithRedirect({redirect_uri:`http://localhost:4200/profile`});
   }
 }

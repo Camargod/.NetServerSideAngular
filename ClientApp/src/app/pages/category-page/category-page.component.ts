@@ -21,6 +21,7 @@ export class CategoryPageComponent implements OnInit {
     if(this.title == ""){
       this.route.params.subscribe((params)=>{
         this.title = params.categoryName
+
       })
     }
   }

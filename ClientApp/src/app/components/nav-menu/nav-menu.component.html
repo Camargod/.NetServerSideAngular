@@ -1,30 +1,24 @@
 <div class="flex flex-column lateral-navigation align-center" [ngClass]="selectedSideNavigationStyle">
   <div class="flex find-item icon-zone">
-    <div class="flex align-center justify-center">
-      <input class="text-input" placeholder="O que você procura?">
-    </div>
     <div class="icon flex justify-center align-center pointer">
-      <i class="material-icons search" (click)="sideNavToggle()">search</i>
+      <i class="material-icons search">search</i>
     </div>
   </div>
   <div *ngFor="let item of categories" class="flex icon-zone" (click)="navigateCategory(item)">
-    <div *ngIf="item.type=='image'" class="icon flex align-center justify-center">
-      <svg-icon class="svg-icon" key={{item.icon}} color="white" fontSize={{item.size}}></svg-icon>
-    </div>
     <div class="text-zone flex align-center">
       <p>{{item.name}}</p>
     </div>
   </div>
   <div class="flex h-100 w-100 align-end">
-    <div class="icon-zone flex">
+    <div class="padding-0 icon-zone flex">
       <div class="icon flex align-center justify-center">
-        <i class="material-icons search" (click)="sideNavToggle()">account_circle</i>
+        <i class="fas fa-user-circle s-32"></i>
       </div>
       <div class="text-zone flex align-center">
-        <p class="register"><a [routerLink]="'/login'" (click)="sideNavToggle()">Entre</a> ou <a [routerLink]="'/login'" (click)="sideNavToggle()">Cadastre-se</a></p>
+        <p class="register"><a [routerLink]="'/login'">Entre</a> ou <a [routerLink]="'/login'">Cadastre-se</a></p>
       </div>
     </div>
   </div>
 </div>
 
-<i class="material-icons md-48 lateral-icon pointer" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i>
+<!-- <i class="material-icons md-48 lateral-icon pointer" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i> -->
