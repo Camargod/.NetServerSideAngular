@@ -5,6 +5,7 @@ import { CategoryPageComponent } from "./pages/category-page/category-page.compo
 import { FavoritesComponent } from "./pages/favorites/favorites.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
+import { SubCategoryComponent } from "./pages/subcategory/subcategory-page.component";
 import { UserComponent } from "./pages/user/user.component";
 
 const routes : Routes = [
@@ -12,6 +13,7 @@ const routes : Routes = [
     { path:'login',component: LoginComponent},
     { path:'category/:categoryName', component: CategoryPageComponent},
     { path:'profile', component: UserComponent},
+    { path:'subcategory', component: SubCategoryComponent},
     { path:'favorites', component: FavoritesComponent}
 ]
 

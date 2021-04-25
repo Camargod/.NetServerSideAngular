@@ -24,6 +24,8 @@ import { RatingTabComponent } from './pages/user/tabs/rating-tab/rating-tab.comp
 import { RatingStarsComponent } from './components/rating-stars/rating-stars.component';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { AppRoutingModule } from './app.routing';
+import { FooterComponent } from './components/footer/footer.component';
+import { SubCategoryComponent } from './pages/subcategory/subcategory-page.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { AppRoutingModule } from './app.routing';
     FavoritesComponent,
     AddressTabComponent,
     RatingTabComponent,
-    RatingStarsComponent
+    RatingStarsComponent,
+    FooterComponent,
+    SubCategoryComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'Client-App' }),

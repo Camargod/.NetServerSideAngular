@@ -3,170 +3,175 @@
 @import './assets/styles/variables';
 /* Provide sufficient contrast against white background */
 
-:root{
-  --background-color: #18A9E0;
-  --hover-back-color: #092E3A;
+:root {
+  --primary-color: #18A9E0;
+  --secondary-color: #092E3A;
+  --buy-color: #06D6A0;
+  --fav-color: #F2557A;
+  --stars-color: #FFD166;
+  --text-color: #303030;
+  --input-text-color: #666666;
+  --input-color: #F0F5F5;
+  --card-color: #FFFFFF;
+  --background-color: #F0F5F5;
 }
 
 
-*
-{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
-
-a {
-  color: #0366d6;
-}
-
-code {
-  color: #e01a76;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-body
-{
-  height: 100%;
-}
-html
-{
-  height: 100%;
+  color: var(--card-color);
+  background-color: var(--primary-color);
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-main
-{
+.btn-primary {
+  color: var(--primary-color);
+  background-color: transparent;
+  border-color: var(--primary-color);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-tertiary {
+  color: var(--secondary-color);
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-padding-lg {
+  padding: 16px 0px 16px 0px;
+}
+
+.btn-padding-sm {
+  padding: 8px 0px 8px 0px;
+}
+
+main {
   padding-left: 220px;
   background-color: #FFFAFA;
   padding-top: 2px;
   overflow-x: hidden;
-  height: calc(100% - 100px)
-}
-
-.flex
-{
-  display: flex;
-}
-.flex-column
-{
+  height: 100%;
   flex-direction: column;
 }
-.justify-center
-{
-  justify-content: center;
-}
-.justify-evenly
-{
-  justify-content: space-evenly;
-}
-.align-center
-{ 
-  align-items: center;
-}
-*
-{
-  font-family: 'Ubuntu', sans-serif;
-}
-.text-input
-{
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 1px solid #CCCCCC;
-  border-radius: 15px;
-  width: 380px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
+
+.flex {
+  display: flex;
 }
 
-.h-100
-{
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.h-100 {
   height: 100%;
 }
 
-.align-end
-{
+.w-100{
+  width: 100%;
+}
+
+.align-end {
   align-items: flex-end;
 }
 
-.justify-self-center
-{
+.justify-self-center {
   justify-self: center;
 }
 
-.main-w-100
-{
-  width: calc(100% - 100px);
-}
-
-.pointer
-{
+.pointer {
   cursor: pointer;
 }
 
-.primary-color
-{
-  color: #118AB2;
-}
-
-app-login, category-page, app-user{
-  width: 100%;
-}
-
-button{
-  background-color:#118AB2;
-  border-radius: 50px;
-  border: none;
-  color: #FFFFFF;
-}
-
-.material-icons{
-  user-select: none;
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.content-body{
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
 
-router-outlet + *{
-  max-width: 1364px;
+router-outlet+* {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  column-gap: 16px;
+  max-width: 1364px;
+  min-height: 100vh;
   justify-content: center;
-  
-  @media only screen 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)  {
-    grid-template-columns: repeat(4,1fr);
+
+  @media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     max-width: calc(100% - 32px);
   }
 }
 
+.s-14 {
+  font-size: 14px !important;
+}
 
-.s-14{
-  font-size: 14px;
+.s-16 {
+  font-size: 16px !important;
 }
-.s-16{
-  font-size: 16px;
+
+.s-24 {
+  font-size: 24px !important;
 }
-.s-24{
-  font-size: 24px;
+
+.s-32 {
+  font-size: 32px !important;
 }
-.s-32{
-  font-size: 32px;
+
+.title-1 {
+  font: bold 32px Ubuntu !important;
+  color: var(--primary-color);
+}
+
+.title-2 {
+  font: bold 24px Ubuntu !important;
+  color: var(--primary-color);
+}
+
+.title-3 {
+  font: bold 16px Ubuntu !important;
+  color: var(--secondary-color);
+}
+
+.title-4 {
+  font: 16px Ubuntu !important;
+  color: var(--secondary-color);
+}
+
+.input-text {
+  font: 16px Roboto !important;
+  color: var(--input-text-color);
+}
+
+.normal-text {
+  font: 14px Roboto !important;
+  color: var(--text-color);
+}
+
+.input-bg {
+  border-radius: 8px;
+  background-color: var(--input-color);
+  padding: 16px;
 }

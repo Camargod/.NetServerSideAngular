@@ -1,7 +1,6 @@
 .header
 {
     height: 100px;
-    margin-right: -100px;
     justify-content: flex-end;
     z-index: 1;
     background-color: #FFFAFA;
@@ -11,7 +10,7 @@
     {
         width:180px;
         border-bottom-left-radius: 50px;
-        background-color:var(--background-color);
+        background-color:var(--primary-color);
         .icons
         {
             font-size: 56px;

@@ -1,4 +1,4 @@
-<div class="flex flex-column lateral-navigation align-center" [ngClass]="selectedSideNavigationStyle">
+<div class="flex flex-column lateral-nav align-center">
   <div class="flex find-item icon-zone">
     <div class="icon flex justify-center align-center pointer">
       <i class="material-icons search">search</i>
@@ -9,8 +9,8 @@
       <p>{{item.name}}</p>
     </div>
   </div>
-  <div class="flex h-100 w-100 align-end">
-    <div class="padding-0 icon-zone flex">
+  <div class="flex h-100 w-100 justify-center align-end">
+    <div class="flex">
       <div class="icon flex align-center justify-center">
         <i class="fas fa-user-circle s-32"></i>
       </div>
@@ -20,5 +20,3 @@
     </div>
   </div>
 </div>
-
-<!-- <i class="material-icons md-48 lateral-icon pointer" (click)="sideNavToggle()" [ngClass]="arrowStyle">keyboard_arrow_right</i> -->
