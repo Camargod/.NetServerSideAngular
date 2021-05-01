@@ -67,6 +67,11 @@ main {
   overflow-x: hidden;
   height: 100%;
   flex-direction: column;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 0;
+  }
+
 }
 
 .flex {
@@ -113,7 +118,7 @@ main {
   justify-content: space-between;
 }
 
-router-outlet+* {
+.router-outlet+* {
   width: 100%;
   max-width: 1364px;
   min-height: 100vh;

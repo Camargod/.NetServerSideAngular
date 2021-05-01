@@ -6,6 +6,10 @@
   z-index: 11;
   top: 0px;
 
+  @media only screen and (max-width: 1024px) {
+   display: none;  
+  }
+
   .icon {
     height: 100px;
     margin-right: 10px;
