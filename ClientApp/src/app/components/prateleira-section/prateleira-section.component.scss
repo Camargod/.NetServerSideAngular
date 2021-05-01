@@ -1,7 +1,7 @@
 .section-title
 {
-    font-size: 72px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .left
@@ -35,7 +35,8 @@
 }
 
 .prateleira-body{
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 product-card{

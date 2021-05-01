@@ -4,17 +4,29 @@
 }
 
 ::ng-deep .mat-tab-labels{
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #F0F5F5;
+    flex: 1;
 }
 ::ng-deep .mat-tab-label{
-    font-size: 48px;
-    height: 68px !important;
+    font-size: 16px;
     opacity: 1 !important;
     color: #073B4C;
 }
 ::ng-deep .mat-tab-header{
-    height: 70px;
+    height: auto;
+    border-radius: 50px;
 }
 ::ng-deep .mat-tab-label-active{
-    color: #118AB2;
+    color: var(--primary-color);
+}
+
+.mat-tab-group{
+    padding: 0px 10% 0px 10%;
+}
+
+:host{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
 }

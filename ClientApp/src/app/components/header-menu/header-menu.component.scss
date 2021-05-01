@@ -1,37 +1,23 @@
-.header
-{
-    height: 100px;
-    justify-content: flex-end;
-    z-index: 1;
-    background-color: #FFFAFA;
-    transition: 1.3s;
-    z-index: 10;
-    .shortcuts
-    {
-        width:180px;
-        border-bottom-left-radius: 50px;
-        background-color:var(--primary-color);
-        .icons
-        {
-            font-size: 56px;
-        }
-        .fav-ico
-        {
-            color: #F2557A;
-        }
-        .cart-ico
-        {
-            color: #06D6A0;
-        }
-    }
+:host {
+  position: fixed;
+  right: 0;
+  z-index: 10;
 }
 
-.logo
-{
-    position: absolute;
-    z-index: 1;
-    font-size: 56px;
-    left: 50%;
-    top: 20px;
-    z-index: 10;
+header {
+  justify-content: flex-end;
+  padding: 16px;
+  width: auto;
+  height: auto;
+  border-bottom-left-radius: 16px;
+  background-color: var(--primary-color);
+
+  .fav-ico {
+    color: #F2557A;
+  }
+
+  .cart-ico {
+    margin-right: 16px;
+    color: #06D6A0;
+  }
 }

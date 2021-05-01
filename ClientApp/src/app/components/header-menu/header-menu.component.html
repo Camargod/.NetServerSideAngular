@@ -1,7 +1,4 @@
-<header #header class="header w-100 flex align-center">
-    <div class="shortcuts flex h-100 justify-evenly align-center">
-        <a [routerLink]="'favorites'"><i class="material-icons md-48 icons fav-ico">favorite</i></a>
-        <i class="material-icons md-48 icons cart-ico">local_grocery_store</i>
-    </div>
+<header #header class="flex align-center">
+    <i [routerLink]="''" class="material-icons s-32 cart-ico pointer">local_grocery_store</i>
+    <i [routerLink]="'favorites'" class="material-icons s-32 fav-ico pointer">favorite</i>
 </header>
-<i class="material-icons md-48 logo" #logo [routerLink]="'/'">waves</i>

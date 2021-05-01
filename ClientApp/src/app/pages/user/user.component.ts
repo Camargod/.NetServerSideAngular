@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthGuard, AuthService } from '@auth0/auth0-angular';
-import { of } from 'rxjs';
+import { AuthService } from '@auth0/auth0-angular';
 import { AddressTabComponent } from './tabs/address-tab/address-tab.component';
 import { OrderTabComponent } from './tabs/order-tab/order-tab.component';
 import { RatingTabComponent } from './tabs/rating-tab/rating-tab.component';
@@ -24,17 +23,16 @@ export class UserComponent implements OnInit {
   ]
 
   async ngOnInit() {
-    debugger;
-    this.auth.isAuthenticated$.pipe((loggedIn) => {
-      if (!loggedIn) {
-        this.router.navigate([''])
-        console.log("Não está logado");
-      }
-      else {
-          console.log("está logado");
-          return of(true);
-      }
-    })
+    // this.auth.isAuthenticated$.pipe((loggedIn) => {
+    //   if (!loggedIn) {
+    //     this.router.navigate([''])
+    //     console.log("Não está logado");
+    //   }
+    //   else {
+    //       console.log("está logado");
+    //       return of(true);
+    //   }
+    // })
   }
 
 }
