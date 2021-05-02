@@ -7,8 +7,10 @@
     position: relative;
     img
     {
-        border-radius: 25px;
-        width: 100%;
+        width: calc(100vw - 220px);
+        @media screen and (max-width: 1024px) {
+            width: 100vw;
+        }
         object-fit: cover;
     }
     .navegation-icon

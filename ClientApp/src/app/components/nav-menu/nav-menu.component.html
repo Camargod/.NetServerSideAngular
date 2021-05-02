@@ -1,7 +1,11 @@
-<div class="flex flex-column lateral-nav">
+<div class="menu-button-mobile pointer" (click)="openMenuMobileClick()">
+  <i class="fas fa-bars s-32"></i>
+</div>
+
+<div class="flex flex-column lateral-nav" #navmenu>
   <div class="flex flex-column align-center">
-    <div class="flex justify-center align-center">
-      <svg-icon class="svg-icon" key="eCommerceLogoComNome" color="white"></svg-icon>
+    <div [routerLink]="''" class="flex justify-center align-center">
+      <svg-icon class="svg-icon pointer" key="eCommerceLogoComNome" color="white"></svg-icon>
     </div>
     <div *ngFor="let item of categories" class="flex icon-zone" (click)="navigateCategory(item)">
       <div class="text-zone flex align-center">

@@ -6,8 +6,9 @@
   color: var(--secondary-color);  
   justify-content: space-between;
   @media only screen and (max-width: 1024px) {
+   display: none;
    position: absolute;
-   left: -220px;
+   z-index: 10;
   }
 
   .svg-icon {
@@ -76,4 +77,15 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 8px;
+}
+
+.menu-button-mobile{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  visibility: hidden;
+  z-index: 20;
+  @media screen and (max-width: 1024px) {
+    visibility: visible;
+  }
 }

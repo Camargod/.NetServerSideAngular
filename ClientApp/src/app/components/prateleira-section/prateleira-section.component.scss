@@ -1,33 +1,36 @@
 .section-title
 {
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
 .left
 {
-    left: 0%;
+    left: -20px;
 }
 .right
 {
-    right: 0%;
+    right: -20px;
 }
-
+.button-nav{
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+}
 .navegation-icon
 {
     position: absolute;
-    top: 50%;
-    font-size: 48px;
-    color: #118AB2;
+    top: 113px;
+    font-size: 40px;
+    z-index: 1;
+    color: var(--primary-color);
+    filter: drop-shadow(0 1px 3px #00000029);
 }
 
 .products{
     position: relative;
     width: 100%;
     display: flex;
-    padding: 0px 40px;
     flex-direction: row;
-    overflow: hidden;
 }
 
 .prateleira-list{
@@ -40,15 +43,13 @@
 }
 
 product-card{
-    margin-left: 50px;
+    margin-right: 16px;
+    margin-bottom: 24px;
 }
 product-card :last-child{
-    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .prateleira-full{
     flex-wrap: wrap;
-}
-product-card{
-    margin-bottom: 20px;
 }

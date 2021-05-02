@@ -1,32 +1,45 @@
 .card-body{
-    width: 280px;
-    height: 330px;
+    width: 214px;
+    padding-bottom: 8px;
     display: flex;
     flex-direction: column;
-    padding: 12px 16px;
-    background-color: white;
-    border-radius: 25px;
+    background-color: var(--card-color);
+    border-radius: 8px;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4px;
-    margin-top: 2px;
     position: relative;
+    box-shadow: 0 1px 3px #00000029;
+    cursor: pointer;
+    color: var(--secondary-color);
     .product-name{
-        color: #118AB2;
-        font-size: 18px;
+        margin-top: 8px;
+        font: 16px Ubuntu medium;
+        max-width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 18px;
     }
     .product-price{
-        font-size: 28px;
+        font: 14px Roboto;
+        line-height: 19px;
     }
-    cursor: pointer;
-
     &:hover{
-        box-shadow: 3px 1px 7px 1px #EBEBEB;    
+       opacity: 0.9;    
     }
     .fav{
         position: absolute;
-        color: #118AB2;
-        left: 15px;
-        font-size: 36px;
+        color: var(--fav-color);
+        left: 8px;
+        top: 8px;
+        font-size: 24px;
+    }
+    img {
+        height: 214px;
+        width: 214px;
+        object-fit: contain;
+        border-radius: 8.5px 8.5px 0 0;
+    }
+    rating-stars {
+        margin-top: -28px;
+        font-size: 16px;
     }
 }

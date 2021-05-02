@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header-menu',

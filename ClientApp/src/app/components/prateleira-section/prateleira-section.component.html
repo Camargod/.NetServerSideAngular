@@ -3,12 +3,12 @@
     {{sectionTitle}}
   </h3>
   <div class="products" (mousewheel)="moveByWheel($event)">
-    <i class="material-icons md-48 navegation-icon pointer left" (click)="nextItem(false)">keyboard_arrow_left</i>
+    <button class="button-nav" (click)="nextItem(false)"><i class="fas fa-arrow-circle-left pointer left s-40 navegation-icon"></i></button>
+    <button class="button-nav" (click)="nextItem(true)"><i class="fas fa-arrow-circle-right pointer right s-40 navegation-icon"></i></button>
     <div class="w-100 flex prateleira-list" #prateleiraList>
       <ng-container *ngFor="let product of mockProductList">
         <product-card [product]="product"></product-card>
       </ng-container>
     </div>
-    <i class="material-icons md-48 navegation-icon pointer right" (click)="nextItem(true)">keyboard_arrow_right</i>
   </div>
 </div>
