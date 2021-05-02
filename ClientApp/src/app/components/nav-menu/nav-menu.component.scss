@@ -6,7 +6,8 @@
   color: var(--secondary-color);  
   justify-content: space-between;
   @media only screen and (max-width: 1024px) {
-   display: none;
+   position: absolute;
+   left: -220px;
   }
 
   .svg-icon {

@@ -63,13 +63,13 @@
 main {
   background-color: #FFFAFA;
   overflow-x: hidden;
-  max-height: 100vh;
+  height: 100vh;
   flex-direction: column;
   width: calc(100% - 220px);
   overflow-y: auto;
-
+  align-items: center;
   @media only screen and (max-width: 1024px) {
-    padding-left: 0;
+    width: 100%;
   }
 
 }
@@ -118,13 +118,11 @@ main {
   justify-content: space-between;
 }
 
-.router-outlet+* {
+router-outlet + * {
+  min-height: 100vh;
   width: 100%;
   max-width: 1364px;
-  min-height: 100vh;
-  justify-content: center;
-
-  @media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 1024px) {
     max-width: calc(100% - 32px);
   }
 }
