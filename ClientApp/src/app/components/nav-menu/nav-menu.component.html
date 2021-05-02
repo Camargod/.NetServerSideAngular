@@ -1,22 +1,16 @@
-<div class="flex flex-column lateral-nav align-center">
-  <div class="flex find-item icon-zone">
-    <div class="icon flex justify-center align-center pointer">
-      <svg-icon class="svg-icon" key="eCommerceLogoComNome" color="white" fontSize="120px"></svg-icon>
+<div class="flex flex-column lateral-nav">
+  <div class="flex flex-column align-center">
+    <div class="flex justify-center align-center">
+      <svg-icon class="svg-icon" key="eCommerceLogoComNome" color="white"></svg-icon>
     </div>
-  </div>
-  <div *ngFor="let item of categories" class="flex icon-zone" (click)="navigateCategory(item)">
-    <div class="text-zone flex align-center">
-      <p>{{item.name}}</p>
-    </div>
-  </div>
-  <div class="flex h-100 w-100 justify-center align-end">
-    <div class="flex">
-      <div class="icon flex align-center justify-center">
-        <i class="fas fa-user-circle s-32"></i>
-      </div>
+    <div *ngFor="let item of categories" class="flex icon-zone" (click)="navigateCategory(item)">
       <div class="text-zone flex align-center">
-        <p class="register"><a [routerLink]="'/login'">Entre</a> ou <a [routerLink]="'/login'">Cadastre-se</a></p>
+        <p>{{item.name}}</p>
       </div>
     </div>
+  </div>
+  <div class="flex login">
+    <i class="fas fa-user-circle s-32"></i>
+    <p class="register"><a [routerLink]="'/login'">Entre</a> ou <a [routerLink]="'/login'">Cadastre-se</a></p>
   </div>
 </div>

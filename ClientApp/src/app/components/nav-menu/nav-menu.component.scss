@@ -3,18 +3,15 @@
   width: 220px;
   height: 100vh;
   order: 1;
+  color: var(--secondary-color);  
+  justify-content: space-between;
   @media only screen and (max-width: 1024px) {
-   display: none;  
+   display: none;
   }
 
-  .icon {
-    height: 100px;
-    margin-right: 10px;
-
-    .search {
-      font-size: 60px;
-      color: white;
-    }
+  .svg-icon {
+    font-size: 220px;
+    fill: var(--secondary-color);
   }
 
   .text-zone {
@@ -24,7 +21,7 @@
       overflow-wrap: normal;
       word-wrap: normal;
       hyphens: none;
-      color: white;
+
       min-width: fit-content;
       white-space: nowrap;
       margin: 0;
@@ -43,7 +40,7 @@
 }
 
 .icon-zone {
-  width: 100%;
+  width: calc(100% - 8px);
   flex-wrap: nowrap;
   display: flex;
   align-items: center;
@@ -52,15 +49,17 @@
   &:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
+    color: var(--background-color);
+    border-radius: 20px;
   }
 }
 
 .register {
-  font-size: 16px !important;
+  height: 16px;
+  margin: -6px 0 0 8px;
   a {
-    color: white;
     text-decoration: underline;
-
+    color: var(--secondary-color);
     &:hover {
       font-weight: 500;
     }
@@ -69,4 +68,11 @@
 
 .text-zone {
   padding: 8px 0px;
+}
+
+.login {
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
 }
