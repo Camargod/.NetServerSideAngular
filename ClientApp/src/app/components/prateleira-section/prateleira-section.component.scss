@@ -1,6 +1,7 @@
 .section-title
 {
     font-weight: bold;
+    margin: 8px 0;
 }
 
 .left
@@ -15,6 +16,9 @@
     border: none;
     background-color: transparent;
     border-radius: 0;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }
 .navegation-icon
 {
@@ -43,11 +47,7 @@
 }
 
 product-card{
-    margin-right: 16px;
-    margin-bottom: 24px;
-}
-product-card :last-child{
-    margin-right: 0px;
+    margin: 0 8px 16px 8px;
 }
 
 .prateleira-full{

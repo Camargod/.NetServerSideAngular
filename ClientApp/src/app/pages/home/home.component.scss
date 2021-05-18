@@ -8,9 +8,6 @@
     img
     {
         width: calc(100vw - 220px);
-        @media screen and (max-width: 1024px) {
-            width: 100vw;
-        }
         object-fit: cover;
     }
     .navegation-icon
@@ -18,7 +15,7 @@
         position: absolute;
         top: 50%;
         font-size: 48px;
-        color: #118AB2;
+        color: var(--primary-color);
     }
     .left
     {
@@ -28,4 +25,19 @@
     {
         right: 0%;
     }
+}
+search-bar {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 220px;
+}
+
+@media screen and (max-width: 1024px) {
+    .image-display img {
+        width: 100vw;
+    }
+    search-bar {
+        position: static;
+    } 
 }

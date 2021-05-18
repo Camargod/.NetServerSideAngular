@@ -2,6 +2,11 @@
   position: fixed;
   right: 0;
   z-index: 10;
+  display: flex;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    justify-content: space-between;
+  }
 }
 
 header {
@@ -19,5 +24,16 @@ header {
   .cart-ico {
     margin-right: 16px;
     color: #06D6A0;
+  }
+}
+.svg-icon {
+  display: none;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: calc(50vw - 32px);
+  fill: var(--secondary-color);
+  @media screen and (max-width: 1024px) {
+    display: block;
   }
 }
