@@ -18,18 +18,18 @@ header {
   background-color: var(--primary-color);
 
   .fav-ico {
-    color: #F2557A;
+    color: var(--fav-color);
   }
 
   .cart-ico {
     margin-right: 16px;
-    color: #06D6A0;
+    color: var(--buy-color);
   }
 }
 .svg-icon {
   display: none;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   position: absolute;
   left: calc(50vw - 32px);
   fill: var(--secondary-color);

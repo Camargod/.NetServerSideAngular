@@ -16,9 +16,6 @@
     border: none;
     background-color: transparent;
     border-radius: 0;
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
 }
 .navegation-icon
 {
@@ -32,9 +29,10 @@
 
 .products{
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: row;
+    align-self: center;
 }
 
 .prateleira-list{
@@ -52,4 +50,13 @@ product-card{
 
 .prateleira-full{
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+    .button-nav {
+        display: none;
+    }
+    .products {
+        width: 100%;
+    }
 }

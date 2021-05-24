@@ -1,5 +1,5 @@
-<div class="card-body">
-  <i class="material-icons fav" *ngIf="hasFav">favorite_border</i>
+<div class="card-body" [ngClass]="classByType" >
+  <i class="material-icons fav">favorite_border</i>
   <img [src]="product.image">
   <rating-stars [evaluation]="product.evaluation"></rating-stars>
   <span class="product-name">{{product.name}}</span>

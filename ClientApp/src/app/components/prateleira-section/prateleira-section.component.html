@@ -7,7 +7,7 @@
     <button class="button-nav" (click)="nextItem(true)"><i class="fas fa-arrow-circle-right pointer right s-40 navegation-icon"></i></button>
     <div class="w-100 flex prateleira-list" #prateleiraList>
       <ng-container *ngFor="let product of mockProductList">
-        <product-card [product]="product"></product-card>
+        <product-card [cardType]="'product'" [product]="product"></product-card>
       </ng-container>
     </div>
   </div>

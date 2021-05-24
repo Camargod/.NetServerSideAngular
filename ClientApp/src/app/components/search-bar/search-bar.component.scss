@@ -1,17 +1,17 @@
 :host {
-    display: flex;
     align-items: center;
-    width: calc(100vw - 220px);
     height: 64px;
-    justify-content: center;
-    background:  transparent linear-gradient(180deg, #0000004D 0%, #00000000 100%) 0% 0% no-repeat padding-box;;
-    
+    justify-content: center; 
+    display: flex;
     input {
-        width: 628px;
-        padding: 16px 16px 16px 56px;
+        width: 588px;
+        padding: 16px 56px;
         border-radius: 8px;
         border: 0;
         background-color: var(--input-color);
+        @media  screen and ( max-width: 1024px) {
+            width: calc(100vw - 72px);
+        } 
     }
     button {
         z-index: 1;
@@ -20,12 +20,5 @@
         margin-right: -40px;
         color: var(--secondary-color);
         cursor: pointer;
-    }
-    @media  screen and ( max-width: 1024px) {
-        width: 100%;
-        background: none;
-        input {
-            width: calc(100vw - 72px);
-        }
     }
 }

@@ -1,6 +1,7 @@
-<div #body class="flex w-100 category-body">
-  <div class="flex w-100 justify-center category-title">{{title}}</div>
-  <div [style.width.%]="columnWidth" class="category-column" *ngFor="let category of subCategories">
-  <product-card [product]="category" [hasFav]="false"></product-card>
+<search-bar></search-bar>
+<h2 class="title-1 category-title">{{title}}</h2>
+<div #body class="category-body">
+  <div class="flex" *ngFor="let category of subCategories">
+  <product-card [product]="category" [cardType]="'category'"></product-card>
   </div>
 </div>
