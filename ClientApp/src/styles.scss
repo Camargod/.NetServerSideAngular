@@ -13,7 +13,7 @@
   --input-text-color: #666666;
   --input-color: #F0F5F5;
   --card-color: #FFFFFF;
-  --background-color: #F0F5F5;
+  --background-color: #FCFFFF;
 }
 
 
@@ -61,7 +61,6 @@
 }
 
 main {
-  background-color: #FFFAFA;
   overflow-x: hidden;
   height: 100vh;
   flex-direction: column;
@@ -72,7 +71,6 @@ main {
   @media only screen and (max-width: 1024px) {
     width: 100%;
   }
-
 }
 
 .flex {
@@ -125,6 +123,7 @@ router-outlet + * {
   flex: 1;
   @media only screen and (max-width: 1024px) {
     max-width: calc(100% - 32px);
+    padding-top: 64px;
   }
 }
 
@@ -187,4 +186,17 @@ router-outlet + * {
 body{
   display: flex;
   max-width: 100vw;
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--input-text-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
 }

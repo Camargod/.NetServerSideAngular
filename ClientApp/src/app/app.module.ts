@@ -26,6 +26,7 @@ import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { AppRoutingModule } from './app.routing';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubCategoryComponent } from './pages/subcategory/subcategory-page.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { SubCategoryComponent } from './pages/subcategory/subcategory-page.compo
     RatingTabComponent,
     RatingStarsComponent,
     FooterComponent,
-    SubCategoryComponent
+    SubCategoryComponent,
+    SearchBarComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'Client-App' }),

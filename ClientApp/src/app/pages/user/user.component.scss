@@ -1,8 +1,3 @@
-.tab-header-item{
-    font-size: 72px;
-    color: #073B4C;
-}
-
 ::ng-deep .mat-tab-labels{
     justify-content: space-around;
     background-color: #F0F5F5;
@@ -11,7 +6,7 @@
 ::ng-deep .mat-tab-label{
     font-size: 16px;
     opacity: 1 !important;
-    color: #073B4C;
+    color: var(--secondary-color);
 }
 ::ng-deep .mat-tab-header{
     height: auto;

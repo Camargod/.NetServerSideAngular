@@ -10,10 +10,29 @@ import { SubCategoryCard } from 'src/app/entities/subCategory-card';
 export class ProductCardComponent implements OnInit {
 
   @Input() product : ProductCard;
-  @Input() hasFav = true;
+  @Input() cardType : CardTypeEnum = CardTypeEnum.PRODUCT;
+
+  classByType = "";
+
+  cardTypeEnum = CardTypeEnum;
+
   constructor() { }
 
   ngOnInit() {
+    switch(this.cardType){
+      case CardTypeEnum.PRODUCT:
+        this.classByType = "product";
+        break;
+      case CardTypeEnum.CATEGORY:
+        this.classByType = "category";
+        break;
+    }
   }
 
 }
+
+export enum CardTypeEnum {
+  PRODUCT = "product",
+  CATEGORY = "category"
+}
+

@@ -5,6 +5,10 @@
   order: 1;
   color: var(--secondary-color);  
   justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  
   @media only screen and (max-width: 1024px) {
    display: none;
    position: absolute;
@@ -12,8 +16,9 @@
   }
 
   .svg-icon {
-    font-size: 220px;
+    font-size: 100px;
     fill: var(--secondary-color);
+    margin: 60px;
   }
 
   .text-zone {
@@ -36,9 +41,6 @@
     margin-bottom: 70px;
   }
 
-  display: flex;
-  align-items: flex-start;
-  overflow: hidden;
 }
 
 .icon-zone {

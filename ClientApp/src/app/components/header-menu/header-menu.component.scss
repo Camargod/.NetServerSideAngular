@@ -2,6 +2,11 @@
   position: fixed;
   right: 0;
   z-index: 10;
+  display: flex;
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    justify-content: space-between;
+  }
 }
 
 header {
@@ -13,11 +18,22 @@ header {
   background-color: var(--primary-color);
 
   .fav-ico {
-    color: #F2557A;
+    color: var(--fav-color);
   }
 
   .cart-ico {
     margin-right: 16px;
-    color: #06D6A0;
+    color: var(--buy-color);
+  }
+}
+.svg-icon {
+  display: none;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: calc(50vw - 32px);
+  fill: var(--secondary-color);
+  @media screen and (max-width: 1024px) {
+    display: block;
   }
 }

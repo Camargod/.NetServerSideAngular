@@ -1,9 +1,8 @@
 .card-body{
-    width: 214px;
     padding-bottom: 8px;
     display: flex;
     flex-direction: column;
-    background-color: var(--card-color);
+    background: var(--card-color);
     border-radius: 8px;
     align-items: center;
     position: relative;
@@ -12,11 +11,9 @@
     color: var(--secondary-color);
     .product-name{
         margin-top: 8px;
-        font: 16px Ubuntu medium;
-        max-width: 200px;
+        font-family: Ubuntu medium;
         text-overflow: ellipsis;
         overflow: hidden;
-        line-height: 18px;
     }
     .product-price{
         font: 14px Roboto;
@@ -33,13 +30,53 @@
         font-size: 24px;
     }
     img {
-        height: 214px;
-        width: 214px;
         object-fit: contain;
         border-radius: 8.5px 8.5px 0 0;
     }
     rating-stars {
         margin-top: -28px;
         font-size: 16px;
+    }
+}
+
+.category {
+    img {
+        width: 329px;
+        height: 329px;
+    }
+    .fav {
+        display: none;
+    }
+    .product-name {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    @media screen and (max-width: 1024px) {
+        img {
+            width: 164px;
+            height: 164px; 
+        }
+        .product-name {
+            font-size: 16px;
+            line-height: 18px;
+        }       
+    }
+}
+
+.product {
+    img {
+        height: 214px;
+        width: 214px;
+    }
+    .product-name {
+        font-size: 16px;
+        line-height: 18px;
+        max-width: 200px;
+    }
+    @media screen and (max-width: 1024px) {
+        img {
+            width: 164px;
+            height: 164px; 
+        }    
     }
 }
