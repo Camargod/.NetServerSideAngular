@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CategoryPageComponent } from './category-page.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CategoryPageComponent', () => {
   let component: CategoryPageComponent;
@@ -11,7 +12,8 @@ describe('CategoryPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoryPageComponent ]
+      declarations: [ CategoryPageComponent ],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   }));

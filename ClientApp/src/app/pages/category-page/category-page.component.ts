@@ -34,6 +34,8 @@ export class CategoryPageComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   calculateColumns = () => {
-    this.columnWidth = 100 / Math.floor(this.body.nativeElement.clientWidth / 300)
+    if(this.body){
+      this.columnWidth = 100 / Math.floor(this.body.nativeElement.clientWidth / 300)
+    }
   }
 }

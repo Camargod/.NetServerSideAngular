@@ -17,7 +17,7 @@ export class OrderTabItemComponent implements OnInit {
   }
 
   setSubTotal(){
-    this.itemSubtotal = this.product.price * this.product.qtty;
+    if(this.product) this.itemSubtotal = this.product.price * this.product.qtty;
   }
 
 }

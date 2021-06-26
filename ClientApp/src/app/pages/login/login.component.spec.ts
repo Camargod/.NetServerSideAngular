@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LoginComponent } from './login.component';
+import { AuthService } from '@auth0/auth0-angular';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -11,7 +12,8 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ LoginComponent ],
+      imports: [AuthService]
     })
     .compileComponents();
   }));

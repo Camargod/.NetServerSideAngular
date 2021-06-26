@@ -1,19 +1,19 @@
 <div class="flex w-100 justify-between">
   <div class="flex align-center">
     <div class="img-container">
-      <img src="{{product.img}}" height="70">
+      <img src="{{product?.img}}" height="70">
     </div>
     <div class="flex flex-column h-100 justify-between">
-      <span class="item-title">{{product.name}}</span>
+      <span class="item-title">{{product?.name}}</span>
       <span class="flex flex-column">
         <span class="item-price-label">Preço</span> 
-        <span class="item-price">{{product.price | currency:'BRL'}}</span>
+        <span class="item-price">{{product?.price | currency:'BRL'}}</span>
       </span>
     </div>
   </div>
   <div>
     <div class="flex flex-column h-100 justify-between right-items">
-      <span class="item-title">Quantidade: {{product.qtty}}</span>
+      <span class="item-title">Quantidade: {{product?.qtty}}</span>
       <span class="flex flex-column">
         <span class="item-price-label self-right">Subtotal</span> 
         <span class="item-price">{{itemSubtotal | currency:'BRL'}}</span>

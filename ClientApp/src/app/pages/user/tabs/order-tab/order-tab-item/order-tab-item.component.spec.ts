@@ -2,6 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { OrderTabItemComponent } from './order-tab-item.component';
 
@@ -11,7 +12,8 @@ describe('OrderTabItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OrderTabItemComponent ]
+      declarations: [ OrderTabItemComponent ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));
