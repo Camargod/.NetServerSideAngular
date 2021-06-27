@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_LOADER } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -27,6 +27,7 @@ import { AppRoutingModule } from './app.routing';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubCategoryComponent } from './pages/subcategory/subcategory-page.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     RatingStarsComponent,
     FooterComponent,
     SubCategoryComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    CartComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'Client-App' }),
@@ -74,6 +76,12 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     {
       provide: Window,
       useValue: window,
+    },
+    {
+      provide: HAMMER_LOADER,
+      useValue: async () => {
+        return import('hammerjs/hammer');
+      },
     }
   ],
   bootstrap: [AppComponent],

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "@auth0/auth0-angular";
+import { CartComponent } from "./pages/cart/cart.component";
 import { CategoryPageComponent } from "./pages/category-page/category-page.component";
 import { FavoritesComponent } from "./pages/favorites/favorites.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -14,7 +15,8 @@ const routes : Routes = [
     { path:'category/:categoryName', component: CategoryPageComponent},
     { path:'profile', component: UserComponent},
     { path:'subcategory', component: SubCategoryComponent},
-    { path:'favorites', component: FavoritesComponent}
+    { path:'favorites', component: FavoritesComponent},
+    { path:'cart', component: CartComponent}
 ]
 
 @NgModule({

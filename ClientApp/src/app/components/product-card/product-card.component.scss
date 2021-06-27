@@ -11,12 +11,11 @@
     color: var(--secondary-color);
     .product-name{
         margin-top: 8px;
-        font-family: Ubuntu medium;
         text-overflow: ellipsis;
         overflow: hidden;
+        color: var(--secondary-color);
     }
     .product-price{
-        font: 14px Roboto;
         line-height: 19px;
     }
     &:hover{

@@ -2,10 +2,10 @@
   <h3 class="section-title flex w-100 title-2">
     {{sectionTitle}}
   </h3>
-  <div class="products" (mousewheel)="moveByWheel($event)">
-    <button class="button-nav" (click)="nextItem(false)"><i class="fas fa-arrow-circle-left pointer left s-40 navegation-icon"></i></button>
-    <button class="button-nav" (click)="nextItem(true)"><i class="fas fa-arrow-circle-right pointer right s-40 navegation-icon"></i></button>
-    <div class="w-100 flex prateleira-list" #prateleiraList>
+  <div class="products">
+    <button class="button-nav" [ngClass]="buttonStyle[0]" (click)="nextItem(false)"><i class="fas fa-arrow-circle-left pointer left s-40 navegation-icon"></i></button>
+    <button class="button-nav" [ngClass]="buttonStyle[1]" (click)="nextItem(true)"><i class="fas fa-arrow-circle-right pointer right s-40 navegation-icon"></i></button>
+    <div class="w-100 flex prateleira-list" #prateleiraList (swipe)="prateleiraSwipe($event)">
       <ng-container *ngFor="let product of mockProductList">
         <product-card [cardType]="'product'" [product]="product"></product-card>
       </ng-container>

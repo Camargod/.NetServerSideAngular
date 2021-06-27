@@ -11,7 +11,13 @@
         grid-template-columns: repeat(auto-fit, 164px);
     }
 }
+
 .category-title {
     margin: 32px 0;
     text-align: center;
+    text-transform: capitalize;
+}
+
+:host{
+    min-height: 100vh;
 }

@@ -14,6 +14,7 @@ export class PrateleiraSectionComponent implements OnInit {
   @Input() sectionInfo : any;
   @Input() sectionTitle : string;
   widthToScroll = 330;
+  buttonStyle = ["invisible",""];
 
   mockProductList : Array<ProductCard> = PrateleiraMock;
   ngOnInit() {
@@ -22,11 +23,30 @@ export class PrateleiraSectionComponent implements OnInit {
   nextItem(isPositiveX : boolean){
     let scrollSize = isPositiveX ? this.widthToScroll : -this.widthToScroll;
     let scrollTo = this.prateleiraListDiv.nativeElement.scrollLeft + scrollSize;
-    this.prateleiraListDiv.nativeElement.scrollTo({left:scrollTo,behavior:"smooth"})
+    this.prateleiraListDiv.nativeElement.scrollTo({left:scrollTo,behavior:"smooth"});
+    setTimeout(()=>{
+      this.validatePrateleiraButtonsVisibility(scrollTo);
+    },300)
+    
   }
 
   moveByWheel(event : WheelEvent){
     event.preventDefault();
     this.prateleiraListDiv.nativeElement.scrollLeft += event.deltaY
+  }
+
+  validatePrateleiraButtonsVisibility(scrollTo : number){
+    let maxScrollLeft = this.prateleiraListDiv.nativeElement.scrollWidth - this.prateleiraListDiv.nativeElement.clientWidth;
+
+    if(scrollTo > 0 && this.prateleiraListDiv.nativeElement.scrollLeft < maxScrollLeft){
+      this.buttonStyle.fill("");
+    }
+    else if(this.prateleiraListDiv.nativeElement.scrollLeft >= maxScrollLeft) this.buttonStyle[1] = "invisible";
+    else if(scrollTo <= 0) this.buttonStyle[0] = "invisible";
+  }
+
+  prateleiraSwipe(event){
+    debugger
+    console.log(event);
   }
 }
